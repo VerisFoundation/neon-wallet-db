@@ -14,6 +14,8 @@ cache_config['CACHE_TYPE'] = 'simple'
 
 if USE_MEMCACHE:
     cache_config['CACHE_TYPE'] = 'flask_cache_backends.bmemcached'
+    cache_config['CACHE_MEMCACHED_USERNAME'] = ''
+    cache_config['CACHE_MEMCACHED_PASSWORD'] = ''
     cache_config['CACHE_MEMCACHED_SERVERS'] = os.environ.get('MEMCACHED_URL')
 
 cache = Cache(application, config=cache_config)
