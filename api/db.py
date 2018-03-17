@@ -3,7 +3,7 @@ import os
 import redis
 from rq import Queue
 
-MONGO_APP = 'neon-wallet-db'
+MONGO_APP = 'wallet-db'
 MONGO_URL = os.environ.get('MONGO_URL')
 
 client = MongoClient(MONGO_URL)
