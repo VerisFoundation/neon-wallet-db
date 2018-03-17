@@ -18,7 +18,7 @@ redis_url = os.environ.get('REDIS_URL')
 
 redis_db = redis.from_url(redis_url)
 
-# redis_db.flushdb()
+redis_db.flushdb()
 
 q = Queue(connection=redis_db)
 
